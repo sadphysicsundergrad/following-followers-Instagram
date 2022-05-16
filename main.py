@@ -1,8 +1,8 @@
 import json
 
 # Load the followers and following lists from JSON text file to Python dictionaries
-followers = open(r'''PATH_OF_THE_FOLLOWERS_JSON_FILE''', "r")
-following = open(r'''PATH_OF_THE_FOLLOWING_JSON_FILE''', "r")
+followers = open(r'''D:\Work\Programming\New folder\followers_and_following\followers.json''', "r")
+following = open(r'''D:\Work\Programming\New folder\followers_and_following\following.json''', "r")
 followers_loaded = json.load(followers)
 following_loaded = json.load(following)
 # The relationships_followers attribute contains a list of dictionaries
