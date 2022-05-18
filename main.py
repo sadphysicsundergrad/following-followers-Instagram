@@ -1,8 +1,8 @@
 import json
 
 # Load the followers and following lists from JSON text file to Python dictionaries
-followers = open(r'''D:\Work\Programming\New folder\followers_and_following\followers.json''', "r")
-following = open(r'''D:\Work\Programming\New folder\followers_and_following\following.json''', "r")
+followers = open(r'''D:\Work\Programming\New folder\sakethkalaga_20220518\followers_and_following\followers.json''', "r")
+following = open(r'''D:\Work\Programming\New folder\sakethkalaga_20220518\followers_and_following\following.json''', "r")
 followers_loaded = json.load(followers)
 following_loaded = json.load(following)
 # The relationships_followers attribute contains a list of dictionaries
@@ -31,8 +31,10 @@ list_following = sorted(list_following)
 print("\nNo of followers " + str(len(list_followers)))
 print("No of following " + str(len(list_following)) + "\n")
 
-print("The difference in following and followers is: ")
 diff = list(set(list_following) - set(list_followers))
-for i in diff:
-    print(i)
+print("The difference in following and followers is: " + str(len(diff)))
+if len(diff) != 0:
+    print("They are : ")
+    for i in diff:
+        print(i)
 print()
